@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Click-to-Chat Link Generator 2026 – Free Tool</title>
+  <meta name="description" content="Generate WhatsApp click-to-chat links instantly with custom pre-filled messages. No login required. Free tool for businesses, freelancers & marketers. Works worldwide." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="WhatsApp Click-to-Chat Link Generator 2026 – Free Tool" />
+  <meta property="og:description" content="Create WhatsApp chat links in seconds. No number saving needed. Free, fast, and privacy-safe." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "WhatsApp Click-to-Chat Link Generator",
+    "description": "Free online tool to generate WhatsApp click-to-chat links with pre-filled messages. No login or signup required.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": ["Generate WhatsApp links", "Pre-filled message support", "Country code selector", "Copy to clipboard", "No login required"]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #25D366;
+      --green-dark: #128C7E;
+      --green-light: #dcfce7;
+      --ink: #0f1a14;
+      --ink-2: #2d4a38;
+      --muted: #6b8f77;
+      --surface: #f5faf6;
+      --white: #ffffff;
+      --border: #d4e8d8;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 4px 24px rgba(18,140,126,.10);
+      --shadow-lg: 0 12px 48px rgba(18,140,126,.16);
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--surface);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(245,250,246,.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(16px,4vw,48px);
+    }
+    .header-inner {
+      max-width: 1140px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--ink);
+    }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-icon svg { width: 20px; height: 20px; }
+    .logo-text { font-family: var(--font-head); font-weight: 700; font-size: 1rem; line-height: 1.2; }
+    .logo-text span { color: var(--green-dark); }
+
+    nav { display: flex; gap: 4px; align-items: center; }
+    nav a {
+      font-size: .875rem; font-weight: 500; color: var(--ink-2);
+      text-decoration: none; padding: 6px 12px; border-radius: 8px;
+      transition: background .18s, color .18s;
+    }
+    nav a:hover { background: var(--green-light); color: var(--green-dark); }
+    .nav-cta {
+      background: var(--green) !important; color: var(--white) !important;
+      font-weight: 600 !important; padding: 7px 16px !important;
+      box-shadow: 0 2px 12px rgba(37,211,102,.3);
+      transition: transform .18s, box-shadow .18s !important;
+    }
+    .nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 4px 20px rgba(37,211,102,.4) !important; }
+
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .menu-toggle span {
+      display: block; width: 22px; height: 2px;
+      background: var(--ink); border-radius: 2px; margin: 4px 0;
+      transition: transform .25s, opacity .25s;
+    }
+    @media (max-width: 700px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none; position: absolute; top: 64px; left: 0; right: 0;
+        background: var(--white); border-bottom: 1px solid var(--border);
+        flex-direction: column; padding: 12px 20px 16px; gap: 2px;
+        box-shadow: var(--shadow);
+      }
+      nav.open { display: flex; }
+      nav a { width: 100%; padding: 10px 14px; }
+    }
+
+    /* HERO */
+    .hero {
+      padding: clamp(56px,10vw,100px) clamp(16px,4vw,48px) clamp(40px,7vw,72px);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,211,102,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--green-light); color: var(--green-dark);
+      border: 1px solid #b3e8c4; border-radius: 999px;
+      font-size: .8rem; font-weight: 600; padding: 4px 14px;
+      margin-bottom: 20px; letter-spacing: .04em; text-transform: uppercase;
+      animation: fadeUp .5s ease both;
+    }
+
+    h1 {
+      font-family: var(--font-head); font-weight: 800;
+      font-size: clamp(2rem,5.5vw,3.4rem); line-height: 1.12;
+      color: var(--ink); max-width: 780px; margin: 0 auto 18px;
+      animation: fadeUp .55s .05s ease both;
+    }
+    h1 em { color: var(--green-dark); font-style: normal; }
+
+    .hero-sub {
+      font-size: clamp(1rem,2.2vw,1.2rem); color: var(--muted); font-weight: 300;
+      max-width: 520px; margin: 0 auto 30px;
+      animation: fadeUp .6s .1s ease both;
+    }
+
+    .hero-cta-group {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+      animation: fadeUp .65s .15s ease both; margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-body); font-weight: 600; font-size: .95rem;
+      border: none; border-radius: var(--radius-sm); cursor: pointer;
+      padding: 13px 26px; text-decoration: none; transition: transform .18s, box-shadow .18s;
+    }
+    .btn-primary {
+      background: var(--green); color: var(--white);
+      box-shadow: 0 4px 20px rgba(37,211,102,.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,.45); }
+    .btn-secondary {
+      background: var(--white); color: var(--ink-2);
+      border: 1.5px solid var(--border);
+    }
+    .btn-secondary:hover { background: var(--green-light); border-color: #b3e8c4; transform: translateY(-2px); }
+
+    .trust-pills {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+      animation: fadeUp .7s .2s ease both;
+    }
+    .trust-pill {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 999px; font-size: .8rem; color: var(--muted);
+      padding: 5px 12px; font-weight: 500;
+    }
+
+    /* TOOL SECTION */
+    #tool {
+      padding: clamp(32px,6vw,64px) clamp(16px,4vw,48px);
+    }
+    .section-inner { max-width: 800px; margin: 0 auto; }
+
+    .tool-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 20px; padding: clamp(24px,4vw,44px);
+      box-shadow: var(--shadow-lg);
+    }
+    .tool-title {
+      font-family: var(--font-head); font-weight: 700; font-size: 1.4rem;
+      color: var(--ink); margin-bottom: 6px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .tool-title svg { color: var(--green); width: 24px; height: 24px; }
+    .tool-desc { color: var(--muted); font-size: .9rem; margin-bottom: 28px; }
+
+    .form-grid { display: grid; gap: 18px; }
+    .form-row { display: grid; grid-template-columns: 180px 1fr; gap: 10px; }
+    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
+
+    label {
+      display: block; font-size: .82rem; font-weight: 600;
+      color: var(--ink-2); margin-bottom: 7px; letter-spacing: .02em;
+    }
+
+    select, input[type="text"], textarea {
+      width: 100%; padding: 11px 14px;
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm); font-family: var(--font-body);
+      font-size: .95rem; color: var(--ink); outline: none;
+      transition: border-color .18s, box-shadow .18s;
+      appearance: none; -webkit-appearance: none;
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%236b8f77' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; cursor: pointer;
+    }
+    select:focus, input:focus, textarea:focus {
+      border-color: var(--green); box-shadow: 0 0 0 3px rgba(37,211,102,.15);
+    }
+    textarea { resize: vertical; min-height: 88px; line-height: 1.55; }
+    input.error { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,.12); }
+
+    .error-msg { display: none; color: #ef4444; font-size: .8rem; margin-top: 5px; font-weight: 500; }
+    .error-msg.show { display: block; }
+    .char-count { text-align: right; font-size: .75rem; color: var(--muted); margin-top: 4px; }
+
+    .preview-box {
+      background: var(--surface); border: 1.5px dashed var(--border);
+      border-radius: var(--radius-sm); padding: 12px 14px;
+      font-size: .82rem; color: var(--muted); word-break: break-all;
+      min-height: 44px; transition: border-color .2s;
+    }
+    .preview-box.has-link { border-color: var(--green); color: var(--green-dark); font-weight: 500; }
+    .preview-label { font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .btn-generate {
+      background: var(--green); color: var(--white);
+      box-shadow: 0 3px 16px rgba(37,211,102,.35);
+      flex: 1; justify-content: center; min-width: 140px;
+    }
+    .btn-generate:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,.45); }
+    .btn-reset {
+      background: var(--white); color: var(--ink-2);
+      border: 1.5px solid var(--border);
+    }
+    .btn-reset:hover { background: #fef2f2; border-color: #fca5a5; color: #dc2626; }
+
+    .output-section { margin-top: 24px; display: none; }
+    .output-section.show { display: block; animation: fadeUp .35s ease; }
+    .output-card {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border: 1.5px solid #86efac; border-radius: var(--radius);
+      padding: 20px;
+    }
+    .output-title {
+      font-family: var(--font-head); font-weight: 700; font-size: 1rem;
+      color: var(--green-dark); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .output-link {
+      background: var(--white); border: 1.5px solid #86efac;
+      border-radius: var(--radius-sm); padding: 11px 14px;
+      font-size: .85rem; color: var(--green-dark); word-break: break-all;
+      font-weight: 500; margin-bottom: 14px; line-height: 1.5;
+    }
+    .output-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .btn-copy {
+      background: var(--white); color: var(--ink-2);
+      border: 1.5px solid var(--border); font-size: .875rem;
+    }
+    .btn-copy:hover { background: var(--green-light); border-color: #b3e8c4; }
+    .btn-open { background: var(--green); color: var(--white); font-size: .875rem; box-shadow: 0 2px 12px rgba(37,211,102,.3); }
+    .btn-open:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(37,211,102,.4); }
+
+    .copy-toast {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--ink); color: var(--white);
+      font-size: .8rem; padding: 7px 14px; border-radius: 999px;
+      position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(60px);
+      opacity: 0; transition: opacity .25s, transform .25s; z-index: 999; white-space: nowrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,.25);
+    }
+    .copy-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* CONTENT SECTIONS */
+    .content-wrap {
+      max-width: 800px; margin: 0 auto;
+      padding: 0 clamp(16px,4vw,48px) clamp(48px,8vw,80px);
+    }
+    .content-section { margin-bottom: clamp(40px,6vw,64px); }
+
+    h2 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(1.35rem,3vw,1.75rem); color: var(--ink); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    h3 {
+      font-family: var(--font-head); font-weight: 600;
+      font-size: 1.05rem; color: var(--ink-2); margin: 20px 0 8px;
+    }
+    p { color: #3a5444; font-size: .97rem; margin-bottom: 12px; line-height: 1.75; }
+
+    .steps-list { list-style: none; counter-reset: steps; display: grid; gap: 14px; }
+    .steps-list li {
+      counter-increment: steps;
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); padding: 16px 18px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .steps-list li:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .step-num {
+      width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+      background: var(--green); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-weight: 700; font-size: .85rem;
+    }
+    .step-num::before { content: counter(steps); }
+    .step-body strong { display: block; font-weight: 600; color: var(--ink); font-size: .93rem; margin-bottom: 2px; }
+    .step-body span { color: var(--muted); font-size: .87rem; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 14px; }
+    .benefit-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); padding: 20px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .benefit-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .benefit-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .benefit-card h3 { margin: 0 0 6px; font-size: .95rem; }
+    .benefit-card p { font-size: .85rem; margin: 0; color: var(--muted); }
+
+    .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 14px; }
+    .use-case {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); padding: 18px;
+      display: flex; gap: 12px; align-items: flex-start;
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .use-case:hover { box-shadow: var(--shadow); border-color: #b3e8c4; }
+    .use-case-icon {
+      width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0;
+      background: var(--green-light); display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .use-case h3 { font-size: .9rem; margin: 0 0 3px; }
+    .use-case p { font-size: .82rem; margin: 0; color: var(--muted); }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 10px; }
+    .faq-item {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px; cursor: pointer;
+      font-weight: 600; font-size: .95rem; color: var(--ink);
+      transition: background .15s; user-select: none;
+    }
+    .faq-q:hover { background: var(--surface); }
+    .faq-chevron {
+      width: 20px; height: 20px; flex-shrink: 0; color: var(--green);
+      transition: transform .25s;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .3s ease, padding .3s ease;
+      font-size: .9rem; color: #3a5444; line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding: 0 20px 16px; }
+
+    footer {
+      background: var(--ink); color: rgba(255,255,255,.55);
+      text-align: center; padding: 30px clamp(16px,4vw,48px);
+      font-size: .82rem; line-height: 1.8;
+    }
+    footer strong { color: rgba(255,255,255,.85); }
+    footer a { color: var(--green); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(22px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .section-divider {
+      height: 1px; background: var(--border);
+      max-width: 800px; margin: 0 auto 48px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#" aria-label="WhatsLink Home">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.13.558 4.13 1.534 5.874L.054 23.5l5.73-1.503A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.213-3.4.892.907-3.311-.234-.375A9.818 9.818 0 012.182 12c0-5.421 4.397-9.818 9.818-9.818 5.421 0 9.818 4.397 9.818 9.818 0 5.421-4.397 9.818-9.818 9.818z"/></svg>
+      </div>
+      <span class="logo-text">Whats<span>Link</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="#">Home</a>
+      <a href="#tool">Tool</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#tool" class="nav-cta">Try Free &#8594;</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-badge">&#10003; 100% Free &middot; No Login Required</div>
+  <h1>WhatsApp Click-to-Chat<br><em>Link Generator 2026</em></h1>
+  <p class="hero-sub">Create WhatsApp chat links instantly without saving numbers &mdash; for businesses, freelancers &amp; marketers.</p>
+  <div class="hero-cta-group">
+    <a href="#tool" class="btn btn-primary">
+      &#9889; Generate Link Now
+    </a>
+    <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+  </div>
+  <div class="trust-pills">
+    <span class="trust-pill">&#10003; No signup needed</span>
+    <span class="trust-pill">&#128274; Privacy safe</span>
+    <span class="trust-pill">&#127757; Works worldwide</span>
+    <span class="trust-pill">&#9889; Instant results</span>
+  </div>
+</section>
+
+<section id="tool" style="padding: clamp(32px,6vw,64px) clamp(16px,4vw,48px);">
+  <div class="section-inner">
+    <div class="tool-card reveal">
+      <div class="tool-title">
+        &#128172; WhatsApp Link Generator
+      </div>
+      <p class="tool-desc">Fill in the phone number and optional message below to instantly create a shareable WhatsApp chat link.</p>
+
+      <div class="form-grid">
+        <div>
+          <label for="countryCode">Country Code &amp; Phone Number</label>
+          <div class="form-row">
+            <div>
+              <select id="countryCode" aria-label="Country code">
+                <option value="91">&#127470;&#127475; India (+91)</option>
+                <option value="1">&#127482;&#127480; USA (+1)</option>
+                <option value="44">&#127468;&#127463; UK (+44)</option>
+                <option value="61">&#127462;&#127482; Australia (+61)</option>
+                <option value="971">&#127462;&#127466; UAE (+971)</option>
+                <option value="65">&#127480;&#127468; Singapore (+65)</option>
+                <option value="60">&#127474;&#127486; Malaysia (+60)</option>
+                <option value="62">&#127470;&#127465; Indonesia (+62)</option>
+                <option value="92">&#127477;&#127472; Pakistan (+92)</option>
+                <option value="880">&#127463;&#127465; Bangladesh (+880)</option>
+                <option value="94">&#127480;&#127473; Sri Lanka (+94)</option>
+                <option value="977">&#127475;&#127477; Nepal (+977)</option>
+                <option value="49">&#127465;&#127466; Germany (+49)</option>
+                <option value="33">&#127467;&#127479; France (+33)</option>
+                <option value="39">&#127470;&#127481; Italy (+39)</option>
+                <option value="34">&#127466;&#127480; Spain (+34)</option>
+                <option value="55">&#127463;&#127479; Brazil (+55)</option>
+                <option value="52">&#127474;&#127485; Mexico (+52)</option>
+                <option value="27">&#127487;&#127462; South Africa (+27)</option>
+                <option value="234">&#127475;&#127468; Nigeria (+234)</option>
+                <option value="254">&#127472;&#127466; Kenya (+254)</option>
+                <option value="81">&#127471;&#127477; Japan (+81)</option>
+                <option value="82">&#127472;&#127479; South Korea (+82)</option>
+                <option value="86">&#127464;&#127475; China (+86)</option>
+              </select>
+            </div>
+            <div>
+              <input type="text" id="phoneNumber" placeholder="e.g. 9876543210" inputmode="numeric" maxlength="15" autocomplete="tel" />
+              <div class="error-msg" id="phoneError">Please enter a valid phone number (7&ndash;15 digits).</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Pre-filled Message <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+          <textarea id="message" placeholder="Hi! I'd like to know more about your services..." maxlength="1000"></textarea>
+          <div class="char-count"><span id="charCount">0</span> / 1000 characters</div>
+        </div>
+
+        <div>
+          <div class="preview-label">Live Link Preview</div>
+          <div class="preview-box" id="linkPreview">Your generated link will appear here in real-time&hellip;</div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-generate btn-primary" id="generateBtn" onclick="generateLink()">
+            &#9889; Generate Link
+          </button>
+          <button class="btn btn-reset btn-secondary" onclick="resetTool()">
+            &#8635; Reset
+          </button>
+        </div>
+      </div>
+
+      <div class="output-section" id="outputSection">
+        <div class="output-card">
+          <div class="output-title">&#10003; Your WhatsApp Link is Ready!</div>
+          <div class="output-link" id="outputLink"></div>
+          <div class="output-actions">
+            <button class="btn btn-copy" onclick="copyLink()">&#128203; Copy Link</button>
+            <a id="openWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-open">
+              &#128172; Open in WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="content-wrap">
+
+  <div class="section-divider"></div>
+
+  <section class="content-section reveal" id="intro">
+    <h2>&#128172; What is a WhatsApp Click-to-Chat Link?</h2>
+    <p>A <strong>WhatsApp click-to-chat link</strong> is a special URL that opens a WhatsApp conversation directly with any phone number &mdash; even if the number isn't saved in your contacts. These links use WhatsApp's official <code>wa.me</code> short-link format, and can optionally include a pre-filled message that appears in the chat box the moment it opens.</p>
+    <p>Businesses, freelancers, and marketers use click-to-chat links on websites, email signatures, social media bios, and digital ads to make it effortless for customers to start a conversation in one tap.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="content-section reveal" id="how-it-works">
+    <h2>&#128640; How to Use This Tool</h2>
+    <p>Generating your WhatsApp link takes under 30 seconds. Here's how:</p>
+    <ol class="steps-list">
+      <li>
+        <div class="step-num"></div>
+        <div class="step-body">
+          <strong>Select your country code</strong>
+          <span>Choose your country from the dropdown. India (+91) is pre-selected by default.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num"></div>
+        <div class="step-body">
+          <strong>Enter the phone number</strong>
+          <span>Type the WhatsApp-registered number without leading zeros or the + symbol.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num"></div>
+        <div class="step-body">
+          <strong>Add a pre-filled message (optional)</strong>
+          <span>Write any message you want to auto-populate in the chat. Great for inquiry templates.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num"></div>
+        <div class="step-body">
+          <strong>Click "Generate Link"</strong>
+          <span>The tool instantly creates a valid wa.me link with your message URL-encoded.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num"></div>
+        <div class="step-body">
+          <strong>Copy or open directly</strong>
+          <span>Use the Copy button to share anywhere, or tap "Open in WhatsApp" to test it immediately.</span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="content-section reveal">
+    <h2>&#10024; Benefits of Using Click-to-Chat Links</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">&#9889;</div>
+        <h3>Instant Conversations</h3>
+        <p>Customers reach you in a single tap &mdash; no number saving, no searching.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#128200;</div>
+        <h3>Higher Conversion Rate</h3>
+        <p>Pre-filled messages reduce friction, leading to more conversations started.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#128274;</div>
+        <h3>Privacy Friendly</h3>
+        <p>Customers don't need to save your number, and you don't need theirs.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#127757;</div>
+        <h3>Works Globally</h3>
+        <p>Any WhatsApp number in the world works &mdash; 180+ countries supported.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#128203;</div>
+        <h3>Share Anywhere</h3>
+        <p>Add your link to websites, Instagram bio, business cards, email footers.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#128176;</div>
+        <h3>Completely Free</h3>
+        <p>No subscriptions, no credits, no hidden fees. 100% free forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="content-section reveal">
+    <h2>&#127919; Who Uses WhatsApp Click-to-Chat Links?</h2>
+    <p>Click-to-chat links are used across industries to simplify customer communication:</p>
+    <div class="use-cases-grid">
+      <div class="use-case">
+        <div class="use-case-icon">&#127978;</div>
+        <div>
+          <h3>Small Businesses</h3>
+          <p>Add to Google Business profiles, websites, and flyers for customer inquiries.</p>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">&#128188;</div>
+        <div>
+          <h3>Freelancers</h3>
+          <p>Put in your portfolio footer so potential clients can reach you instantly.</p>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">&#128227;</div>
+        <div>
+          <h3>Digital Marketers</h3>
+          <p>Use in ad campaigns as a click-to-WhatsApp CTA to boost ROAS.</p>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">&#127973;</div>
+        <div>
+          <h3>Healthcare &amp; Clinics</h3>
+          <p>Let patients book appointments directly via WhatsApp in one tap.</p>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">&#127979;</div>
+        <div>
+          <h3>Education &amp; Coaching</h3>
+          <p>Share with students for quick queries about courses and schedules.</p>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">&#128717;</div>
+        <div>
+          <h3>E-commerce Stores</h3>
+          <p>Drive WhatsApp orders directly from product pages and social ads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="content-section reveal" id="faq">
+    <h2>&#10067; Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is this WhatsApp link generator completely free?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="faq-a">Yes &mdash; 100% free, forever. There are no premium plans, no usage limits, and no hidden charges. You can generate as many WhatsApp links as you need without creating an account.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do I need to save the number to start a chat?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="faq-a">No. That's the entire purpose of a click-to-chat link. When someone clicks the link, WhatsApp opens a conversation with that number directly &mdash; without either party needing to save the contact first.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can I use this for my WhatsApp Business account?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="faq-a">Absolutely. Click-to-chat links work for both personal WhatsApp and WhatsApp Business numbers. Simply enter your business phone number and customize the pre-filled message to match your brand tone.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is it safe to share my number in a WhatsApp link?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="faq-a">The link contains your phone number in the URL, so only share it with people or platforms you trust. This tool processes everything locally in your browser &mdash; we never store, transmit, or log any phone numbers you enter.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What is the correct format for the phone number?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="faq-a">Enter the number without the leading zero, country code, or + symbol. For example, for the Indian number 09876543210, enter 9876543210. The tool automatically prepends the country code you select from the dropdown.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Does the pre-filled message send automatically?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="faq-a">No. The message is pre-filled in the chat input box when WhatsApp opens &mdash; but the user still needs to tap the send button to actually send it. This is by WhatsApp's design to maintain user consent.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <strong>WhatsLink &ndash; WhatsApp Click-to-Chat Link Generator</strong><br>
+  &copy; 2026 WhatsLink. All rights reserved.<br>
+  <span>&#9888;&#65039; Disclaimer: This tool is not affiliated with, endorsed by, or connected to <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">WhatsApp Inc.</a> or Meta Platforms. WhatsApp is a trademark of WhatsApp LLC.</span>
+</footer>
+
+<div class="copy-toast" id="copyToast">&#10003; Link copied to clipboard!</div>
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+  document.querySelectorAll('#mainNav a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.getElementById('mainNav').classList.remove('open');
+    });
+  });
+
+  var msgEl = document.getElementById('message');
+  var charCountEl = document.getElementById('charCount');
+  msgEl.addEventListener('input', function() {
+    charCountEl.textContent = this.value.length;
+    updatePreview();
+  });
+
+  function buildLink() {
+    var cc = document.getElementById('countryCode').value;
+    var num = document.getElementById('phoneNumber').value.replace(/\D/g, '');
+    var msg = document.getElementById('message').value.trim();
+    if (!cc || !num) return null;
+    return 'https://wa.me/' + cc + num + (msg ? '?text=' + encodeURIComponent(msg) : '');
+  }
+
+  function updatePreview() {
+    var box = document.getElementById('linkPreview');
+    var link = buildLink();
+    if (link) {
+      box.textContent = link;
+      box.classList.add('has-link');
+    } else {
+      box.textContent = 'Your generated link will appear here in real-time\u2026';
+      box.classList.remove('has-link');
+    }
+  }
+
+  document.getElementById('countryCode').addEventListener('change', updatePreview);
+  document.getElementById('phoneNumber').addEventListener('input', function() {
+    this.classList.remove('error');
+    document.getElementById('phoneError').classList.remove('show');
+    updatePreview();
+  });
+
+  function generateLink() {
+    var phoneEl = document.getElementById('phoneNumber');
+    var num = phoneEl.value.replace(/\D/g, '');
+    if (!num || num.length < 7 || num.length > 15) {
+      phoneEl.classList.add('error');
+      document.getElementById('phoneError').classList.add('show');
+      phoneEl.focus();
+      return;
+    }
+    var link = buildLink();
+    var outputSection = document.getElementById('outputSection');
+    document.getElementById('outputLink').textContent = link;
+    document.getElementById('openWhatsApp').href = link;
+    outputSection.classList.add('show');
+    outputSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function copyLink() {
+    var link = document.getElementById('outputLink').textContent;
+    if (!link) return;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(link).then(showToast).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+    function fallbackCopy() {
+      var ta = document.createElement('textarea');
+      ta.value = link; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta); showToast();
+    }
+  }
+
+  function showToast() {
+    var t = document.getElementById('copyToast');
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2600);
+  }
+
+  function resetTool() {
+    document.getElementById('phoneNumber').value = '';
+    document.getElementById('phoneNumber').classList.remove('error');
+    document.getElementById('phoneError').classList.remove('show');
+    document.getElementById('message').value = '';
+    charCountEl.textContent = '0';
+    document.getElementById('outputSection').classList.remove('show');
+    updatePreview();
+  }
+
+  function toggleFaq(el) {
+    var item = el.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+
+  document.getElementById('phoneNumber').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') generateLink();
+  });
+</script>
+</body>
+</html>
